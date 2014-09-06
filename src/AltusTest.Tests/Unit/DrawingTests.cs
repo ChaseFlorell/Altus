@@ -51,7 +51,7 @@ namespace AltusTest.Tests.Unit
         public void ShouldDrawWhatITellItToFromString()
         {
             // setup
-            var canvas = new Canvas("Box");
+            var canvas = new Canvas("BoX");
             var expected = Resources.app_DrawingABox;
 
             // execute

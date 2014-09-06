@@ -1,5 +1,6 @@
 ﻿using System;
 using AltusTest.Core.Exceptions;
+using AltusTest.Core.Extensions;
 using AltusTest.Core.Properties;
 
 namespace AltusTest.Core.Drawing
@@ -13,13 +14,13 @@ namespace AltusTest.Core.Drawing
             _shapeToDraw = shapeToDraw;
         }
 
-        public Canvas(string shapeToDraw)
+        public Canvas(string caseInsensitiveShapeToDraw)
         {
-            var parsed = Enum.TryParse(shapeToDraw, out _shapeToDraw);
+            var parsed = Enum.TryParse(caseInsensitiveShapeToDraw.ToTitleCase(), out _shapeToDraw);
 
             if (!parsed)
             {
-                throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, shapeToDraw));
+                throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, caseInsensitiveShapeToDraw));
             }
         }
 
