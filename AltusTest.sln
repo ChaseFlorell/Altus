@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Tests", "src\AltusTest.Tests\AltusTest.Tests.csproj", "{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{78A8DA62-5556-4487-B7BE-B9875A050555}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Core", "src\AltusTest.Core\AltusTest.Core.csproj", "{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
