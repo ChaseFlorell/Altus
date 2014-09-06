@@ -15,39 +15,41 @@ namespace AltusTest.Core.Drawing
 
         public Canvas(string shapeToDraw)
         {
-            shapeToDraw = shapeToDraw.ToLower();
+            var parsed = Enum.TryParse(shapeToDraw, out _shapeToDraw);
 
-            switch (shapeToDraw)
+            if (!parsed)
             {
-                case "circle" : _shapeToDraw = Shape.Circle;
-                    break;
-                case "line": _shapeToDraw = Shape.Line;
-                    break;
-                case "box" : _shapeToDraw = Shape.Box;
-                    break;
-                default :
-                    throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, shapeToDraw));
+                throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, shapeToDraw));
             }
         }
 
         public string Draw()
         {
-            throw  new NotImplementedException();
-        }
-
-        public class Circle
-        {
-            public static string Draw()
+            switch (_shapeToDraw)
             {
-                throw new System.NotImplementedException();
+                case Shape.Box:
+                    return Box.Draw();
+                case Shape.Circle:
+                    return Circle.Draw();
+                case Shape.Line:
+                    return Line.Draw();
             }
+            throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, "unknown"));
         }
 
         public class Box
         {
             public static string Draw()
             {
-                throw new System.NotImplementedException();
+                return Resources.app_DrawingABox;
+            }
+        }
+
+        public class Circle
+        {
+            public static string Draw()
+            {
+                return Resources.app_DrawingACircle;
             }
         }
 
@@ -55,7 +57,7 @@ namespace AltusTest.Core.Drawing
         {
             public static string Draw()
             {
-                throw new System.NotImplementedException();
+                return Resources.app_DrawingALine;
             }
         }
     }

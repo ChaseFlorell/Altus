@@ -51,7 +51,7 @@ namespace AltusTest.Tests.Unit
         public void ShouldDrawWhatITellItToFromString()
         {
             // setup
-            var canvas = new Canvas("BoX");
+            var canvas = new Canvas("Box");
             var expected = Resources.app_DrawingABox;
 
             // execute
@@ -76,6 +76,17 @@ namespace AltusTest.Tests.Unit
         }
 
         [Test]
+        public void ShouldThrowOnUnknownShape()
+        {
+            // setup
+            const Shape shapeToDraw = (Shape)4;
+
+            // assert
+            var ex = Assert.Throws<InvalidShapeException>(() => new Canvas(shapeToDraw).Draw());
+            Assert.That(ex.Message, Is.EqualTo(string.Format(Resources.app_InvalidShapeExceptionMessage, "unknown")));
+        }
+
+        [Test]
         public void ShouldThrowOnInvalidShape()
         {
             // setup
@@ -84,7 +95,7 @@ namespace AltusTest.Tests.Unit
 
             // assert
             var ex = Assert.Throws<InvalidShapeException>(() => canvas = new Canvas(shapeToDraw));
-            Assert.That(ex.Message, Is.EqualTo(string.Format(Resources.app_InvalidShapeExceptionMessage,shapeToDraw.ToLower() )));
+            Assert.That(ex.Message, Is.EqualTo(string.Format(Resources.app_InvalidShapeExceptionMessage, shapeToDraw)));
         }
     }
 }
