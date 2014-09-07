@@ -8,9 +8,9 @@ Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/82el0
   
  1. Write a program that counts from any number (under 100) in decimal down to 0 in binary output. DO NOT use the ToString() method. For example, the following line in a code snippet: BinCount(5); Would produce: 101 100 11 10 01 00 
  2. Write a program or method that takes in a string and reproduces the string on the console output in the following format: 
-     a. All vowels are lowercase 
-     b. All consonants are uppercase 
-     c. even digits (0, 2, 4, 6, 8) are stripped 
+   - All vowels are lowercase 
+   - All consonants are uppercase 
+   - even digits (0, 2, 4, 6, 8) are stripped 
 
     For example, the following line in a code snippet: ChangeCase(“alphabet0123”); Would produce or return: aLPHaBeT13 
 
