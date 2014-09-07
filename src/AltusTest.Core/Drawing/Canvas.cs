@@ -9,10 +9,17 @@ namespace AltusTest.Core.Drawing
     {
         private readonly Shape _shapeToDraw;
 
+        public Canvas()
+        {
+            // empty constructor indicates we draw all
+            _shapeToDraw = Shape.All;
+        }
+
         public Canvas(Shape shapeToDraw)
         {
             _shapeToDraw = shapeToDraw;
         }
+
 
         public Canvas(string caseInsensitiveShapeToDraw)
         {
@@ -34,6 +41,9 @@ namespace AltusTest.Core.Drawing
                     return Circle.Draw();
                 case Shape.Line:
                     return Line.Draw();
+                case Shape.All:
+                    return string.Join(" | ", new[] {Box.Draw(), Circle.Draw(), Line.Draw()});
+
             }
             throw new InvalidShapeException(string.Format(Resources.app_InvalidShapeExceptionMessage, "unknown"));
         }
@@ -67,6 +77,7 @@ namespace AltusTest.Core.Drawing
     {
         Circle,
         Line,
-        Box
+        Box,
+        All
     }
 }

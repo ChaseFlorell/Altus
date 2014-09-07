@@ -46,7 +46,7 @@
     <Compile Include="Unit\BinaryTests.cs" />
     <Compile Include="Unit\DrawingTests.cs" />
     <Compile Include="Unit\ExtensionTests.cs" />
-    <Compile Include="Unit\StringTests.cs" />
+    <Compile Include="Unit\StringChangerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

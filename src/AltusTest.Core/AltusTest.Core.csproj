@@ -41,6 +41,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Changers\ConsonantChanger.cs" />
+    <Compile Include="Changers\IStringChangeHandler.cs" />
+    <Compile Include="Changers\NumberChanger.cs" />
+    <Compile Include="Changers\VowelChanger.cs" />
+    <Compile Include="Changers\StringChangerBase.cs" />
     <Compile Include="Exceptions\InvalidShapeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

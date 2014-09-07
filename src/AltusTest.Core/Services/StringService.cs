@@ -1,4 +1,4 @@
-using System;
+using AltusTest.Core.Changers;
 
 namespace AltusTest.Core.Services
 {
@@ -6,7 +6,11 @@ namespace AltusTest.Core.Services
     {
         public string ChangeCase(string original)
         {
-            throw new NotImplementedException();
+            var chainOfResponsibility = new ConsonantChanger()
+                .AddToChain(new VowelChanger()
+                .AddToChain(new NumberChanger()));
+
+            return chainOfResponsibility.Output(original);
         }
     }
 }
