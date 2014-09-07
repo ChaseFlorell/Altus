@@ -46,6 +46,7 @@
     <Compile Include="Changers\NumberChanger.cs" />
     <Compile Include="Changers\VowelChanger.cs" />
     <Compile Include="Changers\StringChangerBase.cs" />
+    <Compile Include="Exceptions\BinaryCountException.cs" />
     <Compile Include="Exceptions\InvalidShapeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

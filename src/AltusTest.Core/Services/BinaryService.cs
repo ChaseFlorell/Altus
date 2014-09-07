@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AltusTest.Core.Exceptions;
+using AltusTest.Core.Properties;
 
 namespace AltusTest.Core.Services
 {
@@ -8,6 +10,11 @@ namespace AltusTest.Core.Services
     {
         public string BinCount(decimal input)
         {
+            if (input > 100 || input < 1)
+            {
+                throw new BinaryCountException(string.Format(Resources.app_BinaryCountException, input));
+            }
+
             var binaries = new Stack<string>(); // stack is reversed, so we're actually building the collection backwards (counting up).
 
             for (var i = 0; i <= input; i++)
@@ -40,7 +47,7 @@ namespace AltusTest.Core.Services
         public bool VerifyBinary(string binaryString, decimal expectedFirstNumber)
         {
             var numbers = binaryString.Split(' ');
-            var collection = new decimal[(int)expectedFirstNumber-1];
+            var collection = new decimal[(int)expectedFirstNumber];
 
             for (var i = 0; i <= collection.Length-1; i++)
             {
@@ -48,8 +55,8 @@ namespace AltusTest.Core.Services
             }
 
             var numberIsCorrect = collection[0] == expectedFirstNumber;
-            var isSequential = Enumerable.Range(0, collection.Length).Any(i => collection[i] != collection[0] + i);
-
+            var isSequential = collection.Length == 1 || Enumerable.Range(0, collection.Length).Any(i => collection[i] != collection[0] + i);
+            
             return numberIsCorrect && isSequential;
         }
     }

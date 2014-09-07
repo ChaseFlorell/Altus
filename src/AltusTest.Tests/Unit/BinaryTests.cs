@@ -1,4 +1,6 @@
-﻿using AltusTest.Core.Services;
+﻿using AltusTest.Core.Exceptions;
+using AltusTest.Core.Properties;
+using AltusTest.Core.Services;
 using NUnit.Framework;
 
 namespace AltusTest.Tests.Unit
@@ -12,6 +14,40 @@ namespace AltusTest.Tests.Unit
         public void SetUp()
         {
             _binaryService = new BinaryService();
+        }
+
+        [Test]
+        public void ShouldNotRunWithDecimalLargerThanOneHundred()
+        {
+            // setup 
+            const decimal validNumber = 100;
+            const decimal invalidNumber = 101;
+
+            // execute
+            var validBinary = _binaryService.BinCount(validNumber);
+            var ex = Assert.Throws<BinaryCountException>(() => _binaryService.BinCount(invalidNumber));
+            var verifiedBinary = _binaryService.VerifyBinary(validBinary, validNumber);
+
+            // assert
+            Assert.IsTrue(verifiedBinary);
+            Assert.That(ex.Message, Is.EqualTo(string.Format(Resources.app_BinaryCountException, invalidNumber)));
+        }
+
+        [Test]
+        public void ShouldNotRunWithZeroOrLess()
+        {
+            // setup 
+            const decimal validNumber = 1;
+            const decimal invalidNumber = -1;
+
+            // execute
+            var validBinary = _binaryService.BinCount(validNumber);
+            var ex = Assert.Throws<BinaryCountException>(() => _binaryService.BinCount(invalidNumber));
+            var verifiedBinary = _binaryService.VerifyBinary(validBinary, validNumber);
+
+            // assert
+            Assert.IsTrue(verifiedBinary);
+            Assert.That(ex.Message, Is.EqualTo(string.Format(Resources.app_BinaryCountException, invalidNumber)));
         }
 
         [Test]

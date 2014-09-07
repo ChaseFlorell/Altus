@@ -62,6 +62,15 @@ namespace AltusTest.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} is not a valid binary count number. Please be sure you use a number between 0 and 100..
+        /// </summary>
+        public static string app_BinaryCountException {
+            get {
+                return ResourceManager.GetString("app_BinaryCountException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drawing a box.
         /// </summary>
         public static string app_DrawingABox {
