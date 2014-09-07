@@ -1,3 +1,7 @@
+Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/82el0dug2ysnosjl/branch/master)](https://ci.appveyor.com/project/ChaseFlorell/altustest/branch/master)
+
+----
+
 # Please answer ALL questions, use C# for coding exercises. T-SQL for SQL questions  #
 
 **Technical**
