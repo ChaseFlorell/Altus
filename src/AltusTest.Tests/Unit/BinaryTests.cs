@@ -1,4 +1,5 @@
-﻿using AltusTest.Core.Exceptions;
+﻿using System;
+using AltusTest.Core.Exceptions;
 using AltusTest.Core.Properties;
 using AltusTest.Core.Services;
 using NUnit.Framework;
@@ -92,6 +93,19 @@ namespace AltusTest.Tests.Unit
 
             // assert
             Assert.IsTrue(verified);
+        }
+
+        [Test]
+        public void ShouldThrowOnInvalidBinaryString()
+        {
+            // setup
+            const string invalidString = @"hello world";
+
+            // execute
+            Action execute = () => _binaryService.VerifyBinary(invalidString, 5);
+
+            // assert
+            Assert.Throws<FormatException>(() => execute());
         }
     }
 }
