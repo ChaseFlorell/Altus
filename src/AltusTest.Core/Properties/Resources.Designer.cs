@@ -98,6 +98,15 @@ namespace AltusTest.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Type a phrase to be transformed, include numbers, and letters of both upper and lower case..
+        /// </summary>
+        public static string app_Instructions {
+            get {
+                return ResourceManager.GetString("app_Instructions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} is not a valid shape, please use Circle, Box, or Line.
         /// </summary>
         public static string app_InvalidShapeExceptionMessage {

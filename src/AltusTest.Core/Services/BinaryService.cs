@@ -6,7 +6,7 @@ using AltusTest.Core.Properties;
 
 namespace AltusTest.Core.Services
 {
-    public class BinaryService
+    public class BinaryService : IBinaryService
     {
         private static string DecimalToBin(decimal input)
         {

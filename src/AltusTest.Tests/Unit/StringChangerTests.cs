@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using AltusTest.Core;
 using AltusTest.Core.Changers;
 using AltusTest.Core.Services;
+using Autofac;
 using NUnit.Framework;
 
 namespace AltusTest.Tests.Unit
@@ -8,12 +10,13 @@ namespace AltusTest.Tests.Unit
     [TestFixture]
     public class StringChangerTests
     {
-        private StringService _stringService;
+        private IStringService _stringService;
 
         [SetUp]
         public void SetUp()
         {
-            _stringService = new StringService();
+            var container = new CoreIoC().Load();
+            _stringService = container.Resolve<IStringService>();
         }
 
         [Test]

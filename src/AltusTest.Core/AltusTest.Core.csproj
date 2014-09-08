@@ -38,6 +38,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +47,7 @@
     <Compile Include="Changers\NumberChanger.cs" />
     <Compile Include="Changers\VowelChanger.cs" />
     <Compile Include="Changers\StringChangerBase.cs" />
+    <Compile Include="CoreIoC.cs" />
     <Compile Include="Exceptions\BinaryCountException.cs" />
     <Compile Include="Exceptions\InvalidShapeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -57,7 +59,17 @@
     </Compile>
     <Compile Include="Services\BinaryService.cs" />
     <Compile Include="Drawing\Canvas.cs" />
+    <Compile Include="Services\IBinaryService.cs" />
+    <Compile Include="Services\IStringService.cs" />
     <Compile Include="Services\StringService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

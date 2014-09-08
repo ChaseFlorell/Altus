@@ -132,4 +132,7 @@
   <data name="app_InvalidShapeExceptionMessage" xml:space="preserve">
     <value>{0} is not a valid shape, please use Circle, Box, or Line</value>
   </data>
+  <data name="app_Instructions" xml:space="preserve">
+    <value>Type a phrase to be transformed, include numbers, and letters of both upper and lower case.</value>
+  </data>
 </root>

@@ -1,7 +1,9 @@
 ﻿using System;
+using AltusTest.Core;
 using AltusTest.Core.Exceptions;
 using AltusTest.Core.Properties;
 using AltusTest.Core.Services;
+using Autofac;
 using NUnit.Framework;
 
 namespace AltusTest.Tests.Unit
@@ -9,12 +11,13 @@ namespace AltusTest.Tests.Unit
     [TestFixture]
     public class BinaryTests
     {
-        private BinaryService _binaryService;
+        private IBinaryService _binaryService;
 
         [SetUp]
         public void SetUp()
         {
-            _binaryService = new BinaryService();
+            var container = new CoreIoC().Load();
+            _binaryService = container.Resolve<IBinaryService>();
         }
 
         [Test]
@@ -39,7 +42,7 @@ namespace AltusTest.Tests.Unit
         {
             // setup 
             const decimal validNumber = 1;
-            const decimal invalidNumber = -1;
+            const decimal invalidNumber = 0;
 
             // execute
             var validBinary = _binaryService.BinCount(validNumber);
