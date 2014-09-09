@@ -17,6 +17,12 @@
 > The purpose of the `Employee_Departments` table is to join Employees with Departments in a Many-To-Many relationship. One Employee can be a member of many Departments, and likewise one Department can have many Employees. This table is called a join table.
 
  - There is a flaw in the current database schema. Currently the commission rate can exceed 100%. How would you modify the table “Items” to ensure that the commissions cannot exceed 100%?
+
+
+    ALTER TABLE Items   
+    ADD CONSTRAINT [CK_CommPerc_LessThan_100]  
+    CHECK (commission_percent <= 100) 
+
  - The business is booming and as a new business requirement customers are required to be tracked. How would you modify the existing database to keep track of customers and the items that they buy? [[Answer](https://github.com/ChaseFlorell/AltusTest/blob/master/sql/CustomerTrackingANDOrdersTablePerfImprovements.sql)]
     - *note: I've combined the answer for this and the orders improvement challenge in a single script.*
  - As the main developer of the system (backend and frontend), what can you do to improve the performance of this interface? [[Same script as above](https://github.com/ChaseFlorell/AltusTest/blob/master/sql/CustomerTrackingANDOrdersTablePerfImprovements.sql)]
