@@ -3,6 +3,10 @@
 **Code Challenges**
 
  - All technical answers are written in C# and are contained in the [[src](https://github.com/ChaseFlorell/AltusTest/tree/master/src)] directory.  
+    - The quickest way to see it all work is to git clone this project and run the `build.ps1` from your powershell console.
+       - From there you will see all 25 tests pass, and both console apps will be located in the `build-artifacts/output` directory.
+          - AltusTest.ConsoleApp.exe
+          - AltusTest.ConsoleDraw.exe
  - All answers are proven using Tests based around the criteria examples, and the tests are run on a CI server, and the build status is reported here: [![Build status](https://ci.appveyor.com/api/projects/status/82el0dug2ysnosjl/branch/master)](https://ci.appveyor.com/project/ChaseFlorell/altustest/branch/master)  
     - Challenge 1 is proven in tests under [Unit/BinaryTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/BinaryTests.cs), but doesn't have an accompanying console app.
        - This will thow custom exceptions if the user tries to enter a number higher than 100 or lower than 1.
