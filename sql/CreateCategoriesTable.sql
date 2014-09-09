@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[Categories]
 (
 	[Id] [bigint] IDENTITY(1,1) NOT NULL,
 	[ParentId] [bigint] NULL,
-	[Name] [nvarchar](20) NULL,
+	[Name] [nvarchar](20) NOT NULL,
 	CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
 	(
 		[Id] ASC
