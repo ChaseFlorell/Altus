@@ -10,7 +10,7 @@
        - This also has a Binary Validator method that is designed to validate that the original method output the appropriate binary.  
     - Challenge 2 is proven in tests under [Unit/StringChangerTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/StringChangerTests.cs), and is also accompanied with the [ConsoleApp](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.ConsoleApp/Program.cs)
        - Notice this challenge is leveraging **Dependency Injection** and the **Chain of Responsibility** pattern.
-    - Challenge 3 was a little vague to me, but is proven to the best of my understanding in tests under [Unit/DrawingTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/DrawingTests.cs)
+    - Challenge 3 was a little vague to me, but is proven to the best of my understanding in tests under [Unit/DrawingTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/DrawingTests.cs), and is also accompanied with the [ConsoleDraw](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.ConsoleDraw/Program.cs) app.
        - I decided to take on the bonus challenge and allow it to take both a pre-set shape AND a shape that the user can define in the console. 
           - It throws custom exceptions if the user asks to draw an invalid shape
           - It is accompanied with an Extension Method to change any user input string to `Title Case` to ensure the parser can parse their input without them worrying about case sensitivity.
