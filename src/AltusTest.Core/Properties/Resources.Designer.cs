@@ -98,6 +98,15 @@ namespace AltusTest.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Type a shape to draw. Should be Circle, Box, or Line.
+        /// </summary>
+        public static string app_DrawInstructions {
+            get {
+                return ResourceManager.GetString("app_DrawInstructions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Type a phrase to be transformed, include numbers, and letters of both upper and lower case..
         /// </summary>
         public static string app_Instructions {
@@ -112,6 +121,15 @@ namespace AltusTest.Core.Properties {
         public static string app_InvalidShapeExceptionMessage {
             get {
                 return ResourceManager.GetString("app_InvalidShapeExceptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Now try an invalid shape like Oval, Square, or Tree.
+        /// </summary>
+        public static string app_TryAnInvalidString {
+            get {
+                return ResourceManager.GetString("app_TryAnInvalidString", resourceCulture);
             }
         }
     }

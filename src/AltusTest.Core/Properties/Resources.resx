@@ -135,4 +135,10 @@
   <data name="app_Instructions" xml:space="preserve">
     <value>Type a phrase to be transformed, include numbers, and letters of both upper and lower case.</value>
   </data>
+  <data name="app_DrawInstructions" xml:space="preserve">
+    <value>Type a shape to draw. Should be Circle, Box, or Line</value>
+  </data>
+  <data name="app_TryAnInvalidString" xml:space="preserve">
+    <value>Now try an invalid shape like Oval, Square, or Tree</value>
+  </data>
 </root>

@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Core", "src\Altus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleApp", "src\AltusTest.ConsoleApp\AltusTest.ConsoleApp.csproj", "{51BDBEBB-9AB1-47DE-8664-D22EE1521AE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleDraw", "src\AltusTest.ConsoleDraw\AltusTest.ConsoleDraw.csproj", "{A2BE2EB5-0110-4169-A967-F71A1FE18C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{51BDBEBB-9AB1-47DE-8664-D22EE1521AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51BDBEBB-9AB1-47DE-8664-D22EE1521AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51BDBEBB-9AB1-47DE-8664-D22EE1521AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
