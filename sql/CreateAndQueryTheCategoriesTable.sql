@@ -12,21 +12,17 @@ GO
 
 CREATE TABLE [dbo].[Categories]
 (
-	[Id] [bigint] IDENTITY(1,1) NOT NULL,
-	[ParentId] [bigint] NULL,
-	[Name] [nvarchar](20) NOT NULL,
+	 [Id] [bigint] IDENTITY(1,1) NOT NULL
+	,[ParentId] [bigint] NULL
+	,[Name] [nvarchar](20) NOT NULL
 	CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
 	(
 		[Id] ASC
 	)
+
+	CONSTRAINT [FK_Categories_Categories] FOREIGN KEY([ParentId])
+	REFERENCES [dbo].[Categories] ([Id])
 ) 
-GO
-
-ALTER TABLE [dbo].[Categories]  WITH CHECK ADD  CONSTRAINT [FK_Categories_Categories] FOREIGN KEY([ParentId])
-REFERENCES [dbo].[Categories] ([Id])
-GO
-
-ALTER TABLE [dbo].[Categories] CHECK CONSTRAINT [FK_Categories_Categories]
 GO
 
 -- After data has been inserted, query the table
