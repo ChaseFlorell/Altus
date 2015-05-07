@@ -2,7 +2,7 @@
 
 **Code Challenges** ([original challenge documentation](challenges.md))
 
- - All technical answers are written in C# and are contained in the [[src](https://github.com/ChaseFlorell/AltusTest/tree/master/src)] directory.  
+ - All technical answers are written in C# and are contained in the [[src](src)] directory.  
     - The quickest way to see it all work is to git clone this project and run the `build.ps1` from your powershell console.
        - From there you will see all 25 tests pass, and all three console apps will be located in the `build-artifacts/output` directory.
           - AltusTest.Binary.exe
