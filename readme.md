@@ -1,6 +1,6 @@
 ##My answers to the Altus Challenges##
 
-**Code Challenges**
+**Code Challenges** ([original challenge documentation](challenges.md))
 
  - All technical answers are written in C# and are contained in the [[src](https://github.com/ChaseFlorell/AltusTest/tree/master/src)] directory.  
     - The quickest way to see it all work is to git clone this project and run the `build.ps1` from your powershell console.
