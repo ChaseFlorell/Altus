@@ -53,7 +53,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\AltusTest.Core\AltusTest.Core.csproj">
+    <ProjectReference Include="..\AltusTest.Core\AltusTest.Core.csproj">
       <Project>{8EDA1E96-8068-4E75-A1BD-82CD58B88A8B}</Project>
       <Name>AltusTest.Core</Name>
     </ProjectReference>

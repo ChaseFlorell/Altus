@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleApp", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleDraw", "src\AltusTest.ConsoleDraw\AltusTest.ConsoleDraw.csproj", "{A2BE2EB5-0110-4169-A967-F71A1FE18C86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Binary", "AltusTest.Binary\AltusTest.Binary.csproj", "{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Binary", "src\AltusTest.Binary\AltusTest.Binary.csproj", "{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
