@@ -4,11 +4,11 @@
 
 **Part One**
 
- - Write a query that retrieves all employees and departments they work in. Return their name, job description and their respective departments ordering by the employee’s name. [[Answer](sql/FindAllEmployeesAndTheirDepartments.sql)]
- - Write a query that retrieves all employees that work in more than one department. Return the employee’s name and the name of each department. [[Answer](sql/FindEmployeesThatWorkInMoreThanOneDepartment.sql)]
- - Write a query that retrieves the most popular selling item. Return the item’s name, the amount sold and the total profit. Bonus: Use Common Table Expressions (CTE). [[Answer](sql/GetMostPopularSellingItem.sql)]
- - Write a query that retrieves the employee that has earned the most commission for January 2014. Return the employee’s name and the amount of commission they earned. [[Answer](sql/GetTopCommissionedEmployeeForTheMonthOfJanuary.sql)]
- - A new table is introduced to keep track of system logs called “System_Logs”. This table consists of 4 columns. Assuming the table has 100 rows and includes no NULL values and has no primary keys or unique constraints, write a single SQL statement that deletes all duplicate records (i.e. keep one copy) from the table “System_Logs”. [[Answer](sql/RemoveDuplicatesFromSystemLogs.sql)]
+ - Write a query that retrieves all employees and departments they work in. Return their name, job description and their respective departments ordering by the employee’s name. [[Answer](FindAllEmployeesAndTheirDepartments.sql)]
+ - Write a query that retrieves all employees that work in more than one department. Return the employee’s name and the name of each department. [[Answer](FindEmployeesThatWorkInMoreThanOneDepartment.sql)]
+ - Write a query that retrieves the most popular selling item. Return the item’s name, the amount sold and the total profit. Bonus: Use Common Table Expressions (CTE). [[Answer](GetMostPopularSellingItem.sql)]
+ - Write a query that retrieves the employee that has earned the most commission for January 2014. Return the employee’s name and the amount of commission they earned. [[Answer](GetTopCommissionedEmployeeForTheMonthOfJanuary.sql)]
+ - A new table is introduced to keep track of system logs called “System_Logs”. This table consists of 4 columns. Assuming the table has 100 rows and includes no NULL values and has no primary keys or unique constraints, write a single SQL statement that deletes all duplicate records (i.e. keep one copy) from the table “System_Logs”. [[Answer](RemoveDuplicatesFromSystemLogs.sql)]
 
 **Part Two**
 
@@ -23,10 +23,10 @@
     ADD CONSTRAINT [CK_CommPerc_LessThan_100]  
     CHECK (commission_percent <= 100) 
 
- - The business is booming and as a new business requirement customers are required to be tracked. How would you modify the existing database to keep track of customers and the items that they buy? [[Answer](sql/CustomerTrackingANDOrdersTablePerfImprovements.sql)]
+ - The business is booming and as a new business requirement customers are required to be tracked. How would you modify the existing database to keep track of customers and the items that they buy? [[Answer](CustomerTrackingANDOrdersTablePerfImprovements.sql)]
     - *note: I've combined the answer for this and the orders improvement challenge in a single script.*
- - As the main developer of the system (backend and frontend), what can you do to improve the performance of this interface? [[Same script as above](sql/CustomerTrackingANDOrdersTablePerfImprovements.sql)]
- - Design a database structure that represents a tree of categories. Each category has a name and exactly one parent category. Describe using T-SQL syntax how you would retrieve all categories directly under a particular category (all children). [[Answer](sql/CreateAndQueryTheCategoriesTable.sql)]
+ - As the main developer of the system (backend and frontend), what can you do to improve the performance of this interface? [[Same script as above](CustomerTrackingANDOrdersTablePerfImprovements.sql)]
+ - Design a database structure that represents a tree of categories. Each category has a name and exactly one parent category. Describe using T-SQL syntax how you would retrieve all categories directly under a particular category (all children). [[Answer](CreateAndQueryTheCategoriesTable.sql)]
 
 
 
