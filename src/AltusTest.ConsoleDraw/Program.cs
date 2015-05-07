@@ -1,6 +1,5 @@
 ﻿using System;
 using AltusTest.Core.Drawing;
-using AltusTest.Core.Exceptions;
 using AltusTest.Core.Properties;
 
 namespace AltusTest.ConsoleDraw
@@ -9,32 +8,30 @@ namespace AltusTest.ConsoleDraw
     {
         static void Main(string[] args)
         {
-            var runCount = 1;
+            ConsoleMessageService.WriteMessage(Resources.app_DrawInstructions, false);
             while (true)
             {
-                Console.WriteLine(runCount%2 == 0 ? Resources.app_TryAnInvalidString : Resources.app_DrawInstructions);
-                Console.WriteLine(@"----------------------------");
                 var shape = Console.ReadLine();
                 try
                 {
-                    if (!string.IsNullOrWhiteSpace(shape))
-                    {
-                        var canvas = new Canvas(shape);
-                        Console.WriteLine(canvas.Draw());
-                    }
-                    else
+                    if (string.IsNullOrWhiteSpace(shape))
                     {
                         var canvas = new Canvas();
                         Console.WriteLine(canvas.Draw());
                     }
-                }
-                catch (InvalidShapeException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                    else
+                    {
+                        var canvas = new Canvas(shape);
+                        Console.WriteLine(canvas.Draw());
+                    }
 
-                Console.Write(Environment.NewLine + Environment.NewLine);
-                runCount++;
+                    ConsoleMessageService.WriteMessage(Resources.app_TryAnInvalidString);
+                }
+                catch (Exception ex)
+                {
+                    ConsoleMessageService.WriteErrorMessage(ex);
+                    ConsoleMessageService.WriteMessage(Resources.app_DrawInstructions);
+                }
             }
         }
     }

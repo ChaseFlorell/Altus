@@ -12,7 +12,8 @@ namespace AltusTest.ConsoleApp
 
         static void Main(string[] args)
         {
-            BuildIoCContainer();
+            InitializeIoCContainer();
+
 
             while (true)
             {
@@ -23,7 +24,7 @@ namespace AltusTest.ConsoleApp
             }
         }
 
-        private static void BuildIoCContainer()
+        private static void InitializeIoCContainer()
         {
             var container = new CoreIoC().Load();
             _stringService = container.Resolve<IStringService>();

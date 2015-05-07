@@ -141,4 +141,7 @@
   <data name="app_TryAnInvalidString" xml:space="preserve">
     <value>Now try an invalid shape like Oval, Square, or Tree</value>
   </data>
+  <data name="app_BinaryInstructions" xml:space="preserve">
+    <value>Please enter a number between 0 and 100</value>
+  </data>
 </root>

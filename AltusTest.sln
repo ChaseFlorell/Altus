@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Tests", "src\AltusTest.Tests\AltusTest.Tests.csproj", "{7D54E9E2-49C2-4D2E-8B8C-BF17F959ECAA}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleApp", "src\AltusTest.ConsoleApp\AltusTest.ConsoleApp.csproj", "{51BDBEBB-9AB1-47DE-8664-D22EE1521AE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.ConsoleDraw", "src\AltusTest.ConsoleDraw\AltusTest.ConsoleDraw.csproj", "{A2BE2EB5-0110-4169-A967-F71A1FE18C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltusTest.Binary", "AltusTest.Binary\AltusTest.Binary.csproj", "{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2BE2EB5-0110-4169-A967-F71A1FE18C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08FA6142-93D2-43DC-BC74-3F5F3B0068F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
