@@ -9,13 +9,13 @@
           - AltusTest.ConsoleApp.exe
           - AltusTest.ConsoleDraw.exe
  - All answers are proven using Tests based around the criteria examples, and the tests are run on a CI server, and the build status is reported here: [![Build status](https://ci.appveyor.com/api/projects/status/82el0dug2ysnosjl/branch/master)](https://ci.appveyor.com/project/ChaseFlorell/altustest/branch/master)  
-    - Challenge 1 is proven in tests under [Unit/BinaryTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/BinaryTests.cs), and is also accompanied with the [Binary](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Binary/Program.cs) App.
+    - Challenge 1 is proven in tests under [Unit/BinaryTests](src/AltusTest.Tests/Unit/BinaryTests.cs), and is also accompanied with the [Binary](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Binary/Program.cs) App.
        - This will thow custom exceptions if the user tries to enter a number higher than 100 or lower than 1.
        - This will thow a FormatException if the user tries to verify an invalid string as binary.
        - This also has a Binary Validator method that is designed to validate that the original method output the appropriate binary.  
-    - Challenge 2 is proven in tests under [Unit/StringChangerTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/StringChangerTests.cs), and is also accompanied with the [ConsoleApp](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.ConsoleApp/Program.cs)
+    - Challenge 2 is proven in tests under [Unit/StringChangerTests](src/AltusTest.Tests/Unit/StringChangerTests.cs), and is also accompanied with the [ConsoleApp](src/AltusTest.ConsoleApp/Program.cs)
        - Notice this challenge is leveraging **Dependency Injection** and the **Chain of Responsibility** pattern.
-    - Challenge 3 was a little vague to me, but is proven to the best of my understanding in tests under [Unit/DrawingTests](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.Tests/Unit/DrawingTests.cs), and is also accompanied with the [ConsoleDraw](https://github.com/ChaseFlorell/AltusTest/blob/master/src/AltusTest.ConsoleDraw/Program.cs) app.
+    - Challenge 3 was a little vague to me, but is proven to the best of my understanding in tests under [Unit/DrawingTests](src/AltusTest.Tests/Unit/DrawingTests.cs), and is also accompanied with the [ConsoleDraw](src/AltusTest.ConsoleDraw/Program.cs) app.
        - I decided to take on the bonus challenge and allow it to take both a pre-set shape AND a shape that the user can define in the console. 
           - It throws custom exceptions if the user asks to draw an invalid shape
           - It is accompanied with an Extension Method to change any user input string to `Title Case` to ensure the parser can parse their input without them worrying about case sensitivity.
@@ -24,7 +24,7 @@
 
 **SQL Challenges**
 
-Please follow [this link](https://github.com/ChaseFlorell/AltusTest/tree/master/sql) to see the answers to the sql challenges.
+Please follow [this link](sql) to see the answers to the sql challenges.
 
 -----
 
